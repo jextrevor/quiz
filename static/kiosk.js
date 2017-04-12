@@ -1,0 +1,1 @@
+var socket = io.connect(window.location.protocol+'//'+document.domain+':'+location.port+'/kiosk',{});
