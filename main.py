@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
 #import eventlet
 #from gevent import monkey
@@ -42,5 +42,11 @@ def vote():
 def kiosk():
 	templateData = {}
 	return render_template("kiosk.html",**templateData)
+@app.after_request
+def no_cache(response):
+    response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+    response.headers['Cache-Control'] = 'no-cache, no-store'
+    response.headers['Pragma'] = 'no-cache'
+    return response
 if __name__ == '__main__':
     socketio.run(app, "0.0.0.0", 3000)
