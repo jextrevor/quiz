@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
-#import eventlet
-#from gevent import monkey
-#monkey.patch_all()
-#eventlet.monkey_patch()
+import eventlet
+from gevent import monkey
+monkey.patch_all()
+eventlet.monkey_patch()
 app = Flask(__name__)
-socketio = SocketIO(app)
+socketio = SocketIO(app, async_mode="eventlet")
 #voting = {}
 ready = False
 @socketio.on('vote', namespace="/vote")
