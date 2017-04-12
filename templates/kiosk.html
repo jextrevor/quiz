@@ -1,9 +1,74 @@
 <html>
 <head>
 <title>Kiosk</title>
-<script src="../static/socket.io.js"></script>
-<script src="../static/kiosk.js"></script>
+<link rel="stylesheet" href="../static/css/style.css" />
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+<div class="centre" id="loading">
+<div class="preloader-wrapper small active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row" id="already" style="display:none;">
+    <div class="col m3"></div>
+    <div class="col m6">
+  <div class="card">
+          <div class="card-content">Someone is already connected.
+          </div>
+          <div class="card-action">
+          <a href="#" onclick="reform()">Connect Anyway</a>
+          </div>
+        </div>
+        </div>
+        <div class="col m3"></div>
+        </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+      <script src="../static/js/socket.io.js"></script>
+<script src="../static/js/kiosk.js"></script>
 </body>
 </html>

@@ -10,11 +10,12 @@ socketio = SocketIO(app, async_mode="eventlet")
 ready = False
 @socketio.on('vote', namespace="/vote")
 def voter(json):
+	print "hi"
 #	for key,value in json.items():
 #		if key not in voting:
 #			voting[key] = []
 #		voting[key].append(value)
-	emit('update', json, namespace="/kiosk")
+	socketio.emit('update', json, namespace="/kiosk")
 @socketio.on('connect', namespace='/vote')
 def connectw():
 	emit('kiosk', ready)
@@ -23,7 +24,7 @@ def connectd():
 	global ready
 	if ready == False:
 		ready = True
-		emit('kiosk', ready, namespace="/vote")
+		socketio.emit('kiosk', ready, namespace="/vote")
 		print "Connected"
 	else:
 		print "Fail Connect"
@@ -33,7 +34,14 @@ def disconnect():
 	global ready
 	print "Disconnected"
 	ready = False
-	emit('kiosk', ready, namespace="/vote")
+	socketio.emit('kiosk', ready, namespace="/vote")
+@app.route("/reform/")
+def reform():
+	global ready
+	print "Reform"
+	ready = False
+	socketio.emit('kiosk', ready, namespace="/vote")
+	return ""
 @app.route("/vote/")
 def vote():
 	templateData = {}
