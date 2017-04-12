@@ -7,7 +7,7 @@ from flask_socketio import SocketIO, emit
 app = Flask(__name__)
 socketio = SocketIO(app)
 #voting = {}
-readyy = False
+ready = False
 @socketio.on('vote', namespace="/vote")
 def voter(json):
 #	for key,value in json.items():
@@ -17,24 +17,23 @@ def voter(json):
 	emit('update', json, namespace="/kiosk")
 @socketio.on('connect', namespace='/vote')
 def connectw():
-	emit('kiosk', readyy)
+	emit('kiosk', ready)
 @socketio.on('connect', namespace="/kiosk")
 def connectd():
-	if readyy == False:
-		readyy = True
-	#if ready == False:
-	#	ready = True
-	#	emit('kiosk', ready, namespace="/vote")
-	#	print "Connected"
-	#else:
-	#	print "Fail Connect"
-	#	return False
-	#pass
+	global ready
+	if ready == False:
+		ready = True
+		emit('kiosk', ready, namespace="/vote")
+		print "Connected"
+	else:
+		print "Fail Connect"
+		return False
 @socketio.on('disconnect', namespace="/kiosk")
 def disconnect():
+	global ready
 	print "Disconnected"
 	ready = False
-	emit('kiosk', readyy, namespace="/vote")
+	emit('kiosk', ready, namespace="/vote")
 @app.route("/vote/")
 def vote():
 	templateData = {}
