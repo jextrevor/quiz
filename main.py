@@ -8,6 +8,9 @@ app = Flask(__name__)
 socketio = SocketIO(app, async_mode="eventlet")
 #voting = {}
 ready = False
+@socketio.on('next', namespace="/kiosk")
+def next(json):
+	socketio.emit('next', json, namespace="/vote")
 @socketio.on('vote', namespace="/vote")
 def voter(json):
 	print "hi"
