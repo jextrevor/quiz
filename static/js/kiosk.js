@@ -45,19 +45,20 @@ function setupQuestions(){
 	question4 = {
 		title: "You find yourself third-wheeling with your friend and the person he/she likes. What do you do?",
 		data: {
-			quiz1: "Prejudice",
-			quiz2: "Acceptance",
-			quiz3: "",
+			quiz1: "Awkwardness",
+			quiz2: "Dishonesty",
+			quiz3: "Vanity",
 			quiz4: "Ignorance",
 			text1: "Nudge your friend conspicuously.",
 			text2: "Make less-than-true statements about your friend to discredit him.",
-			text3: "Wish them a good day, and go on your way.",
+			text3: "Drown out their conversation by laughing and talking about yourself.",
 			text4: "Talk normally with your friend as if it were just you two."
 		}
 	}
 	questions.push(question1);
 	questions.push(question2);
 	questions.push(question3);
+	questions.push(question4);
 }
 question = 0;
 questionnumber = 0;
