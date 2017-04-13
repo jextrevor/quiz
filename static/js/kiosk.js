@@ -16,7 +16,48 @@ function setupQuestions(){
 			text4: "Mosh like there's no tomorrow."
 		}
 	}
+	question2 = {
+		title: "You're hosting a party. How do you obtain food?",
+		data: {
+			quiz1: "Tackiness",
+			quiz2: "Awkwardness",
+			quiz3: "Dishonesty",
+			quiz4: "Acceptance",
+			text1: "Ask everyone to bring food, but provide none yourself.",
+			text2: "Get McDonalds.",
+			text3: "Buy the most expensive cheesecake you can find, and tell people you made it yourself.",
+			text4: "Let your mom make her less-than-delicious boiled potatoes."
+		}
+	}
+	question3 = {
+		title: "A friend asks you for money because he left his wallet at home. What do you do?",
+		data: {
+			quiz1: "Prejudice",
+			quiz2: "Acceptance",
+			quiz3: "Pride",
+			quiz4: "Tackiness",
+			text1: "Don't give him anything.",
+			text2: "Give him however much he wants.",
+			text3: "Give him some, but make him pay it back with a high rate of interest.",
+			text4: "Give him 1 dollar less than he needs."
+		}
+	}
+	question4 = {
+		title: "You find yourself third-wheeling with your friend and the person he/she likes. What do you do?",
+		data: {
+			quiz1: "Prejudice",
+			quiz2: "Acceptance",
+			quiz3: "",
+			quiz4: "Ignorance",
+			text1: "Nudge your friend conspicuously.",
+			text2: "Make less-than-true statements about your friend to discredit him.",
+			text3: "Wish them a good day, and go on your way.",
+			text4: "Talk normally with your friend as if it were just you two."
+		}
+	}
 	questions.push(question1);
+	questions.push(question2);
+	questions.push(question3);
 }
 question = 0;
 questionnumber = 0;
