@@ -13,7 +13,6 @@ def next(json):
 	socketio.emit('next', json, namespace="/vote")
 @socketio.on('vote', namespace="/vote")
 def voter(json):
-	print "hi"
 #	for key,value in json.items():
 #		if key not in voting:
 #			voting[key] = []
