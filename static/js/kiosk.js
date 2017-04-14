@@ -56,20 +56,23 @@ function setupQuestions(){
 		}
 	}
 	question5 = {
-		title: "You're on a first date. What do you talk about?",
+		title: "What's your favorite part about school?",
 		data: {
-			quiz1: "Vanity",
-			quiz2: "Ignorance",
-			quiz3: "Acceptance",
-			quiz4: "",
-			text1: "Yourself",
-			text2: ""
+			quiz1: "Dishonesty",
+			quiz2: "Awkwardness",
+			quiz3: "Pride",
+			quiz4: "Vanity",
+			text1: "I don't have a favorite part.",
+			text2: "Super Smash Bros Club!",
+			text3: "Who cares about school?",
+			text4: "Lunch and people of the opposite gender."
 		}
 	}
 	questions.push(question1);
 	questions.push(question2);
 	questions.push(question3);
 	questions.push(question4);
+	questions.push(question5);
 }
 question = 0;
 questionnumber = 0;
