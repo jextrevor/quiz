@@ -25,7 +25,7 @@ function setupQuestions(){
 			quiz4: "Acceptance",
 			text1: "Ask everyone to bring food, but provide none yourself.",
 			text2: "Get McDonalds.",
-			text3: "Buy the most expensive cheesecake you can find, and tell people you made it yourself.",
+			text3: "Have your friend make a cheesecake, and tell people you made it yourself.",
 			text4: "Let your mom make her less-than-delicious boiled potatoes."
 		}
 	}
@@ -50,9 +50,20 @@ function setupQuestions(){
 			quiz3: "Vanity",
 			quiz4: "Ignorance",
 			text1: "Nudge your friend conspicuously.",
-			text2: "Make less-than-true statements about your friend to discredit him.",
-			text3: "Drown out their conversation by laughing and talking about yourself.",
+			text2: "Make less-than-true statements about your friend to discredit him/her.",
+			text3: "Drown out their conversation by talking about yourself.",
 			text4: "Talk normally with your friend as if it were just you two."
+		}
+	}
+	question5 = {
+		title: "You're on a first date. What do you talk about?",
+		data: {
+			quiz1: "Vanity",
+			quiz2: "Ignorance",
+			quiz3: "Acceptance",
+			quiz4: "",
+			text1: "Yourself",
+			text2: ""
 		}
 	}
 	questions.push(question1);
