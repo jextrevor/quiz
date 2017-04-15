@@ -211,7 +211,55 @@ function action(){
 	}
 }
 function finish(){
-
+	document.getElementById("header").style.display = "none";
+	var i = 1;
+	for(var key in playertotals){
+		if(playertotals.hasOwnProperty(key)){
+			doStatistics(i,playertotals[key],key);
+			i++;
+		}
+	}
+	document.getElementById("info").style.display = "block";
+}
+function doStatistics(position,json,title){
+	document.getElementById("title"+position.toString()).innerHTML = title;
+	high = 0;
+	low = 10000;
+	for(var key in json){
+		if(json.hasOwnProperty(key)){
+			if(json[key] > high){
+				high = json[key];
+			}
+			if(json[key] < low){
+				low = json[key];
+			}
+		}
+	}
+	highplay = "";
+	lowplay = "";
+	for(var key in json){
+		if(json.hasOwnProperty(key)){
+			if(json[key] == high){
+				if(highplay == ""){
+					highplay = key;
+				}
+				else{
+					highplay += ", ";
+					highplay += key;
+				}
+			}
+			if(json[key] == low){
+				if(lowplay == ""){
+					lowplay = key;
+				}
+				else{
+					lowplay += ", ";
+					lowplay += key;
+				}
+			}
+		}
+	}
+	document.getElementById("content"+position.toString()).innerHTML = "Most: "+highplay+"<br />Least: "+lowplay;
 }
 function reform(){
 	var xhttp = new XMLHttpRequest();
