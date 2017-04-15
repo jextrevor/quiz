@@ -68,11 +68,53 @@ function setupQuestions(){
 			text4: "Lunch and people of the opposite gender."
 		}
 	}
+	question6 = {
+		title: "You're putting together songs for a dance, and the other DJ disagrees with your choices. What do you do?",
+		data: {
+			quiz1: "Prejudice",
+			quiz2: "Ignorance",
+			quiz3: "Tackiness",
+			quiz4: "Acceptance",
+			text1: "Gossip about him behind his back.",
+			text2: "Don't do anything about it.",
+			text3: "Pick dumb songs just to annoy him.",
+			text4: "Let him do the songs that he wants."
+		}
+	}
+	question7 = {
+		title: "It's Sunday night and you remember that you probably have online homework. What do you do?",
+		data: {
+			quiz1: "Acceptance",
+			quiz2: "Dishonesty",
+			quiz3: "Ignorance",
+			quiz4: "Pride",
+			text1: "Admit defeat and stay up to finish it.",
+			text2: "Do it late and tell your teacher that there was an error in the system.",
+			text3: "Pretend like it doesn't exist.",
+			text4: "Don't do it at all, because such homework is below you."
+		}
+	}
+	question8 = {
+		title: "You're going to a Halloween party. What do you wear?",
+		data: {
+			quiz1: "Prejudice",
+			quiz2: "Tackiness",
+			quiz3: "Vanity",
+			quiz4: "Awkwardness",
+			text1: "Wear something reasonable, and criticize everyone else's choice of costume.",
+			text2: "Just wear your sports uniform because it's easy.",
+			text3: "Wear your normal nice clothes just to look better than everyone else.",
+			text4: "Put on your best suspenders and nerd glasses."
+		}
+	}
 	questions.push(question1);
 	questions.push(question2);
 	questions.push(question3);
 	questions.push(question4);
 	questions.push(question5);
+	questions.push(question6);
+	questions.push(question7);
+	questions.push(question8);
 }
 question = 0;
 questionnumber = 0;

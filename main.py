@@ -27,20 +27,16 @@ def connectd():
 	if ready == False:
 		ready = True
 		socketio.emit('kiosk', ready, namespace="/vote")
-		print "Connected"
 	else:
-		print "Fail Connect"
 		return False
 @socketio.on('disconnect', namespace="/kiosk")
 def disconnect():
 	global ready
-	print "Disconnected"
 	ready = False
 	socketio.emit('kiosk', ready, namespace="/vote")
 @app.route("/reform/")
 def reform():
 	global ready
-	print "Reform"
 	ready = False
 	socketio.emit('kiosk', ready, namespace="/vote")
 	return ""
