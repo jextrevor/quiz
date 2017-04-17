@@ -34,7 +34,7 @@ socket.on("kiosk",function(data){
 		setTimeout(function(){do{name = prompt("Enter your name:","");}while(name == null || name == "" );document.getElementById("quizzes").style.display = "block";},1);
 	}
 	else{
-		document.getElementById("loading").style.display = "block";
+		document.getElementById("loading").style.display = "none";
 		document.getElementById("quizzes").style.display = "none";
 		document.getElementById("waiting").style.display = "none";
 		document.getElementById("tquiz1").classList.remove("scale-out");
